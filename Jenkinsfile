@@ -10,7 +10,7 @@ pipeline {
 
         stage('Install Dependencies') {
             steps {
-                sh 'pip install -r requirements.txt'
+                bat 'pip install -r requirements.txt'
             }
         }
 
@@ -22,7 +22,7 @@ pipeline {
 
         stage('Deploy Application') {
             steps {
-                sh 'nohup python app.py &'
+                bat 'start /B python app.py'
             }
         }
     }
