@@ -1,11 +1,10 @@
-from flask import Flask
+from flask import Flask # type: ignore
 
 app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return "CI/CD Pipeline Successful! The Flask App is Running."
+    return "Hello, CI/CD Pipeline is working!"
 
-if __name__ == '__main__':
-    # Hosted on 0.0.0.0 to be accessible within network/containers
+if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000)
